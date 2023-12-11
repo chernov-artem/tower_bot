@@ -42,6 +42,29 @@ def osl():
         move_and_clic(1000, 500)
     time.sleep(0.5)
 
+def avta():
+    "функция нажатия на осла"
+    xy_tmp = images.avta()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+    else:
+        move_and_clic(1000, 500)
+    time.sleep(0.5)
+
+def find_n():
+    "функция нажатия на осла"
+    xy_tmp = images.find_n()
+    print(xy_tmp)
+    # if xy_tmp != None:
+    #     x, y = xy_tmp[0], xy_tmp[1]
+    #     print(x, y)
+    #     move_and_clic(x + 24, y + 8)
+    # else:
+    #     move_and_clic(1000, 500)
+    # time.sleep(0.5)
+
 def gates():
     "функция нажатия на ворота"
     xy_tmp = images.gates()
@@ -59,8 +82,13 @@ def gates():
     time.sleep(1)
     move_and_clic(1000, 400)
 
+def find_north():
+    pag.hotkey('right')
+    time.sleep(0.5)
+    pag.hotkey('right')
+
 time.sleep(2)
 # gates()
-mouse.click('left')
-mouse.click('left')
-pag.hotkey('ctrl', 'a')
+# avta()
+# find_north()
+find_n()

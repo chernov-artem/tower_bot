@@ -26,3 +26,13 @@ def osl():
 
 def gates():
     return find_coordinates('images/gates.png')
+
+def avta():
+    return find_coordinates('images/avta.png')
+
+def find_n():
+    return find_coordinates('images/n.png')
+
+
+
+
