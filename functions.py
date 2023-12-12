@@ -82,13 +82,28 @@ def gates():
     time.sleep(1)
     move_and_clic(1000, 400)
 
+def forward():
+    pag.keyDown('w')
+    time.sleep(8)
+    pag.keyUp('w')
+    time.sleep(5)
+
 def find_north():
     pag.hotkey('right')
     time.sleep(0.5)
     pag.hotkey('right')
 
+def from_floor_to_floor():
+    forward()
+    avta()
+    time.sleep(60)
+
 time.sleep(2)
+from_floor_to_floor()
+from_floor_to_floor()
+from_floor_to_floor()
+# forward()
 # gates()
 # avta()
 # find_north()
-find_n()
+# find_n()
