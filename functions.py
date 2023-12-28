@@ -105,20 +105,20 @@ def find_n():
 
 def gates():
     "функция нажатия на ворота"
-    xy_tmp = images.gates()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-        mouse.click('left')
-
-    else:
-        move_and_clic(1000, 400)
-        move_and_clic(1000, 400)
+    # xy_tmp = images.gates()
+    # if xy_tmp != None:
+    #     x, y = xy_tmp[0], xy_tmp[1]
+    #     print(x, y)
+    #     move_and_clic(x + 24, y + 8)
+    #     mouse.click('left')
+    #     mouse.click('left')
+    #     mouse.click('left')
+    #
+    # else:
+    #     move_and_clic(1000, 400)
+    #     move_and_clic(1000, 400)
     time.sleep(1)
-    move_and_clic(1000, 400)
+    move_and_right_clic(839, 639)
 
 def forward():
     print('forward')
@@ -139,6 +139,7 @@ def from_floor_to_floor():
     time.sleep(60)
 
 # time.sleep(2)
+
 # print('go')
 # from_floor_to_floor()
 
@@ -151,7 +152,7 @@ def from_floor_to_floor():
 #         break
 #     find_north()
 
-# 1 этаж - секунд
+# 1 этаж - 25-30 секунд
 # 2 этаж - секунд
 # 3 этаж - секунд
 # 4 этаж - 48-50 секунд
