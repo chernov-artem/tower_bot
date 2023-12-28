@@ -42,3 +42,5 @@ def tower_entrance():
 def enter_btn():
     return find_coordinates('images/enter.png')
 
+def blue_cross_btn():
+    return find_coordinates('images/blue_cross.png')

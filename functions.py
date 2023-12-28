@@ -67,6 +67,18 @@ def go_to_tower():
         move_and_clic(1000, 500)
     time.sleep(0.5)
 
+def blue_cross():
+    "функция нажатия на кнопку закрытия окна бафа"
+    print('avta')
+    xy_tmp = images.blue_cross_btn()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 2, y + 3)
+    else:
+        pass
+    time.sleep(0.5)
+
 def avta():
     "функция нажатия на кнопку автобоя"
     print('avta')
@@ -122,6 +134,7 @@ def find_north():
 
 def from_floor_to_floor():
     forward()
+    blue_cross()
     avta()
     time.sleep(60)
 
