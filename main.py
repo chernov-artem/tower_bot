@@ -13,4 +13,7 @@ if __name__ == '__main__':
     # functions.go_to_tower()
     # begin()
     # functions.gates()
-    functions.from_floor_to_floor()
+    functions.from_floor_to_floor(50)
+    # functions.from_floor_to_floor(60)
+    # functions.from_floor_to_floor(60)
+    # functions.get_position()

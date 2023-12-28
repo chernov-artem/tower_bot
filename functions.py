@@ -25,6 +25,12 @@ def move_and_clic(x: int, y: int):
     mouse.click('left')
     time.sleep(0.7)
 
+def move_and_double_clic(x: int, y: int):
+    mouse.move(x, y, 0.2)
+    time.sleep(0.7)
+    pag.doubleClick()
+    time.sleep(0.7)
+
 def move_and_right_clic(x: int, y: int):
     mouse.move(x, y, 0.2)
     time.sleep(0.7)
@@ -122,21 +128,21 @@ def gates():
 
 def forward():
     print('forward')
-    pag.keyDown('w')
     time.sleep(7)
-    pag.keyUp('w')
-    time.sleep(2)
+    move_and_double_clic(936, 412)
+    time.sleep(3)
 
 def find_north():
     pag.hotkey('right')
     time.sleep(0.5)
     pag.hotkey('right')
 
-def from_floor_to_floor():
+def from_floor_to_floor(time_sec: int):
+    blue_cross()
     forward()
     blue_cross()
     avta()
-    time.sleep(60)
+    time.sleep(time_sec)
 
 # time.sleep(2)
 
@@ -153,8 +159,8 @@ def from_floor_to_floor():
 #     find_north()
 
 # 1 этаж - 25-30 секунд
-# 2 этаж - секунд
-# 3 этаж - секунд
+# 2 этаж - 40 секунд
+# 3 этаж - 45 секунд
 # 4 этаж - 48-50 секунд
 # 5 этаж - секунд
 # 6 этаж - секунд
