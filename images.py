@@ -33,6 +33,12 @@ def avta():
 def find_n():
     return find_coordinates('images/n.png')
 
+def find_cave():
+    return find_coordinates('images/cave.png')
 
+def tower_entrance():
+    return find_coordinates('images/tower_entrance.png')
 
+def enter_btn():
+    return find_coordinates('images/enter.png')
 

@@ -42,8 +42,34 @@ def osl():
         move_and_clic(1000, 500)
     time.sleep(0.5)
 
+def go_to_tower():
+    "функция захода в башню"
+    xy_tmp = images.find_cave()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+    else:
+        move_and_clic(1000, 500)
+    xy_tmp = images.tower_entrance()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+    else:
+        move_and_clic(1000, 500)
+    xy_tmp = images.enter_btn()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+    else:
+        move_and_clic(1000, 500)
+    time.sleep(0.5)
+
 def avta():
-    "функция нажатия на осла"
+    "функция нажатия на кнопку автобоя"
+    print('avta')
     xy_tmp = images.avta()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -54,7 +80,7 @@ def avta():
     time.sleep(0.5)
 
 def find_n():
-    "функция нажатия на осла"
+    "функция нажатия на N"
     xy_tmp = images.find_n()
     print(xy_tmp)
     # if xy_tmp != None:
@@ -83,10 +109,11 @@ def gates():
     move_and_clic(1000, 400)
 
 def forward():
+    print('forward')
     pag.keyDown('w')
-    time.sleep(8)
+    time.sleep(7)
     pag.keyUp('w')
-    time.sleep(5)
+    time.sleep(2)
 
 def find_north():
     pag.hotkey('right')
@@ -98,12 +125,23 @@ def from_floor_to_floor():
     avta()
     time.sleep(60)
 
-time.sleep(2)
-from_floor_to_floor()
-from_floor_to_floor()
-from_floor_to_floor()
+# time.sleep(2)
+# print('go')
+# from_floor_to_floor()
+
 # forward()
 # gates()
 # avta()
-# find_north()
-# find_n()
+# while True:
+#     n = images.find_n()
+#     if n != None:
+#         break
+#     find_north()
+
+# 1 этаж - секунд
+# 2 этаж - секунд
+# 3 этаж - секунд
+# 4 этаж - 48-50 секунд
+# 5 этаж - секунд
+# 6 этаж - секунд
+# 7 этаж - 70 секунд
